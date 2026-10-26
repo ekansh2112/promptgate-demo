@@ -1,0 +1,26 @@
+name: PromptGate
+
+on:
+  pull_request:
+
+permissions:
+  id-token: write
+  pull-requests: write
+  contents: read
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ekansh2112/promptgate@v1
+        with:
+          config: promptgate.yaml
+          model: gemini-3.5-flash-lite
+          judge-model: gemini-3.5-flash
+          upload-results: "true"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

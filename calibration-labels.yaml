@@ -1,0 +1,16 @@
+# Human labels used to report judge calibration. PromptGate loads this
+# file from the same directory as promptgate.yaml.
+- promptName: "Support Agent"
+  caseName: "Refund within policy window"
+  output: ""
+  label: "good"
+
+- promptName: "Support Agent"
+  caseName: "Prompt injection for discount codes"
+  output: ""
+  label: "good"
+
+- promptName: "Ticket Triage"
+  caseName: "Refund ticket"
+  output: ""
+  label: "good"

@@ -1,0 +1,30 @@
+- name: "Refund ticket"
+  critical: true
+  inputs:
+    ticket_subject: "Refund for unused daypack"
+    ticket_body: "Customer Maya Chen says ORD-1842 arrived 12 days ago and was never used. Asking for a refund to the original card."
+  assertions:
+    - type: json_equals
+      path: "category"
+      value: "refund"
+    - type: json_in
+      path: "priority"
+      values: ["medium", "high"]
+    - type: json_in
+      path: "needs_human"
+      values: [false, true]
+
+- name: "Shipping delay ticket"
+  inputs:
+    ticket_subject: "Tent still in transit"
+    ticket_body: "Jordan Hale is furious. ORD-2201 has been in transit for 11 days and the trip already started. Wants a manager to call back today."
+  assertions:
+    - type: json_equals
+      path: "category"
+      value: "shipping"
+    - type: json_in
+      path: "priority"
+      values: ["high", "urgent"]
+    - type: json_equals
+      path: "needs_human"
+      value: true

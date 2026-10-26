@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.tsbuildinfo
+promptgate-report.json
+.DS_Store
+.env
+.env.*

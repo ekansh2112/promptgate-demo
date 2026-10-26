@@ -1,0 +1,22 @@
+{
+  "name": "promptgate-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Northline Outfitters support bot — PromptGate hosted-mode demo",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "support": "tsx src/index.ts support",
+    "triage": "tsx src/index.ts triage",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/bot.test.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  }
+}
