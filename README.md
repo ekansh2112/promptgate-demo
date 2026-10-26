@@ -38,8 +38,8 @@ The support suite covers a refund-policy ask, an angry customer, an order-status
 
 These stay open so the pass/fail comments are easy to compare:
 
-- **PR A (good change):** *link added after the PR is opened* — clearer refund steps and more empathy. PromptGate should **pass**.
-- **PR B (regression):** *link added after the PR is opened* — drops the injection / discount-code guardrail and loosens the triage JSON contract. PromptGate should **fail** on a critical case.
+- **PR A (good change):** https://github.com/ekansh2112/promptgate-demo/pull/2 — clearer refund steps and more empathy. PromptGate should **pass**.
+- **PR B (regression):** https://github.com/ekansh2112/promptgate-demo/pull/1 — drops the injection / discount-code guardrail and loosens the triage JSON contract. PromptGate should **fail** on a critical case.
 
 ## Hosted mode notes
 
